@@ -1,10 +1,10 @@
 ###### Notations in the book
 
-1. Must-read =><img src="/Users/stevenwong/Downloads/BE_SDE/VE280/c++_primer_image/1.png" style="zoom:50%;" />
+1. Must-read => read book ikon
 
-2. Skim =><img src="/Users/stevenwong/Downloads/BE_SDE/VE280/c++_primer_image/2.png" style="zoom:50%;" />
+2. Skim => book ikon
 
-3. Tricky =><img src="/Users/stevenwong/Downloads/BE_SDE/VE280/c++_primer_image/3.png" style="zoom:50%;" />
+3. Tricky but important => zoom ikon
 
 4. Old important => italic bold
 
@@ -18,15 +18,23 @@
 
 #### 1.2 A First Look at Input/Output
 
-`cerr`(standard error), `clog`
+share same window
+
+- `cout`
+- `cerr` - (standard error), for warning & error message
+- `clog` - for general info
+
+`cout << a << b` in essence is `(cout << a) << b`
 
 `endl` automatically flush buffer
+
+- Purpose: to avoid output stuck in buffer when program crash
 
 
 
 #### 1.3 A Word about Comment
 
-Good comment style (can not nest)
+Good comment style
 
 ```c++
 /*
@@ -41,14 +49,16 @@ Comment Pairs  `/* */` Do Not Nest
 
 #### 1.4 Flow of Control
 
-Reading an Unknown Number of Inputs => `while`
+###### 1.4.3 Reading an Unknown Number of Inputs
 
-An `istream` becomes invalid when we hit 
+How? - use `while`
 
-- `end-of-file` (`ctrl-d`)  OR
+An `istream` becomes invalid when 
+
+- we hit `end-of-file` (`ctrl-d`)  OR
 - encounter an invalid input
 
-3 Common compile errors:
+3 common errors compiler can detect:
 
 -  `syntax error`
 -  `type error`
